@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebRTC Video Call with ASL Detection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>WebRTC Video Call with ASL Detection</h1>
+    <div id="video-container">
+        <video id="localVideo" autoplay muted></video>
+        <video id="remoteVideo" autoplay></video>
+    </div>
+    <div id="asl-container">
+        <h2>ASL Detection</h2>
+        <button id="startASLDetection">Sign Detect On</button>
+        <button id="stopASLDetection" disabled>Sign Detect Off</button>
+        <canvas id="aslCanvas" style="display: none; border: 2px solid blue;"></canvas>
+    </div>
+    <h2>Connected Users</h2>
+    <ul id="userList"></ul>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
